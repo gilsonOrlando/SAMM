@@ -1,11 +1,11 @@
 const express = require('express');
-//var q= require('Q');
+
 const router = express.Router();
 var secret = 'harrypotter';
 var nodemailer = require('nodemailer');
 const db=require('../db/config_vsamm');
 var jwt = require('jsonwebtoken');
-//var q= require('Q');
+
 const Speakeasy = require("speakeasy");
 var formidable = require('formidable');
 var User = require('../models/user');
