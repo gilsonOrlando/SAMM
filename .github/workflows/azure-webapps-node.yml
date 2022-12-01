@@ -44,14 +44,10 @@ jobs:
     - name: npm install, build, and test
       run: |
           cd server
-          ls
           npm install
-          npm start
           cd ..
           cd server2
-          ls
           npm install
-          npm start
           
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
@@ -81,3 +77,9 @@ jobs:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        run: |
+          cd server
+          npm start
+          cd ..
+          cd server2
+          npm start
