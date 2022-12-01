@@ -40,7 +40,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ env.NODE_VERSION }}
-        cache: 'npm'
 
     - name: npm install, build, and test
       run: |
@@ -53,6 +52,7 @@ jobs:
           ls
           npm install
           npm start
+          
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
       with:
