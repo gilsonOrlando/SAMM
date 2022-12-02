@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
+var Q = require('Q');
 //const ctrlUser = require('../controllers/user.controller');
 var secret = 'harrypotter';
 var nodemailer = require('nodemailer');
@@ -13,6 +13,7 @@ var fs = require('fs');
 const  multipart  =  require('connect-multiparty');
 const  multipartMiddleware  =  multipart({ uploadDir:  './uploads' });
 var bcrypt = require('bcryptjs');
+const { REFUSED } = require('dns');
 //===================================RTC CORONA==========================================
 router.get('/rtc_corona', function (req, res) 
 {

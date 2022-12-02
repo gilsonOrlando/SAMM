@@ -1,8 +1,8 @@
 const env = {
   database: 'samm',
-  username: 'root',
-  password: 'root',
-  host: 'localhost',
+  username: 'gilson@mysqlsamm',
+  password: 'Hola.1234',
+  host: 'mysqlsamm.mysql.database.azure.com',
   dialect: 'mysql',
   pool: {
 	  max: 5,

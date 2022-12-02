@@ -1,6 +1,7 @@
 const mysql = require('mysql');
 const connection = mysql.createConnection({
   host: 'mysqlsamm.mysql.database.azure.com',
+  port: 3306,
   user: 'gilson@mysqlsamm',
   password: 'Hola.1234',
   database: 'samm'
@@ -10,6 +11,6 @@ connection.connect((err) => {
       console.log('Error connecting to Db');
       return;
     }
-    console.log('Connection established');
+    console.log('Connection established 3');
   });
 module.exports = connection;
